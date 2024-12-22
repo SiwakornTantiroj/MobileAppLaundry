@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.local_laundry_service),
                     Text(
@@ -69,7 +69,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.timer),
                     Text(
@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.calendar_today),
                     Text(
@@ -101,7 +101,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
                     Text(
                       'ประเภทที่ซัก',
@@ -114,7 +114,7 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   children: [
                     Text(
                       'ค่าบริการ',
@@ -139,13 +139,13 @@ class MyApp extends StatelessWidget {
                             'assets/images/Machine.png',
                             height: 80,
                           ),
-                          Text('#2',
+                          const Text('#2',
                               style: TextStyle(
                                   fontSize: 24, fontWeight: FontWeight.bold)),
                           ElevatedButton(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.green),
+                              backgroundColor:
+                                  WidgetStateProperty.all<Color>(Colors.green),
                             ),
                             onPressed: () {
                               debugPrint('Go Laundry #2');
@@ -165,13 +165,13 @@ class MyApp extends StatelessWidget {
                             'assets/images/Machine.png',
                             height: 80,
                           ),
-                          Text('#2',
+                          const Text('#2',
                               style: TextStyle(
                                   fontSize: 24, fontWeight: FontWeight.bold)),
                           ElevatedButton(
                             style: ButtonStyle(
                               backgroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.red),
+                                  WidgetStateProperty.all<Color>(Colors.red),
                             ),
                             onPressed: () {
                               debugPrint('Go Laundry #3');
@@ -191,13 +191,13 @@ class MyApp extends StatelessWidget {
                             'assets/images/Machine.png',
                             height: 80,
                           ),
-                          Text('#4',
+                          const Text('#4',
                               style: TextStyle(
                                   fontSize: 24, fontWeight: FontWeight.bold)),
                           ElevatedButton(
                             style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all<Color>(
-                                  Colors.green),
+                              backgroundColor:
+                                  WidgetStateProperty.all<Color>(Colors.green),
                             ),
                             onPressed: () {
                               debugPrint('Go Laundry #4');
