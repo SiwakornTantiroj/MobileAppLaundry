@@ -165,7 +165,7 @@ class MyApp extends StatelessWidget {
                             'assets/images/Machine.png',
                             height: 80,
                           ),
-                          const Text('#2',
+                          const Text('#3',
                               style: TextStyle(
                                   fontSize: 24, fontWeight: FontWeight.bold)),
                           ElevatedButton(
