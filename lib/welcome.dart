@@ -25,9 +25,9 @@ class _WelcomeState extends State<Welcome> {
           ),
           leading: IconButton(
               onPressed: () {
-                debugPrint('leading menu');
+                Navigator.pushNamed(context, '/');
               },
-              icon: const Icon(Icons.menu)),
+              icon: const Icon(Icons.arrow_back)),
         ),
         body: Center(
           child: Column(
