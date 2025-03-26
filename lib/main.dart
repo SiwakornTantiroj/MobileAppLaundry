@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:week4_widget/contract_page.dart';
-import 'package:week4_widget/my_order_page.dart';
-import 'package:week4_widget/welcome.dart';
+import 'contract_page.dart';
+import 'welcome.dart';
+import 'my_order_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,14 +13,53 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      title: 'Mobile Laundry App',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: Colors.lightBlue),
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 63, 34, 255)),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const Welcome(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/contract': (context) => const ContractPage(),
+        '/welcome': (context) => const Welcome(),
+        '/orders': (context) => const MyOrderPage(),
+      },
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Main Page')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/contract');
+              },
+              child: const Text('Go to Contract Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/welcome');
+              },
+              child: const Text('Go to Welcome Page'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/orders');
+              },
+              child: const Text('Go to Order Page'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
