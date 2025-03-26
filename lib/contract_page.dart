@@ -13,9 +13,9 @@ class ContractPage extends StatelessWidget {
         ),
         leading: IconButton(
             onPressed: () {
-              debugPrint('leading menu');
+              Navigator.pushNamed(context, '/');
             },
-            icon: const Icon(Icons.menu)),
+            icon: const Icon(Icons.arrow_back)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
